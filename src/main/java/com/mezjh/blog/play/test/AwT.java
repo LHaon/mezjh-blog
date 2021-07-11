@@ -10,5 +10,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class AwT {
-    private Long amount;
+    private String name;
+    private Integer age;
 }

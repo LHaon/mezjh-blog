@@ -19,7 +19,8 @@
 
 - spring   spring相关学习
     - transaction
-        - propagationbehavior：事务传播行为
+        - propagationbehavior：[事务传播行为](https://blog.csdn.net/zqwhh/article/details/118653806)
 #### 好文分享
 - [分布式系统解释](https://baijiahao.baidu.com/s?id=1650890231453975345&wfr=spider&for=pc)
 - [Spring Cloud快速回忆](https://zhuanlan.zhihu.com/p/95696180?from_voters_page=true)
+- [Java锁](https://www.cnblogs.com/jyroy/p/11365935.html)

@@ -21,14 +21,17 @@ public class TestController {
     private Pb2SupportsA pb2SupportsA;
     @Resource
     private Pb4RequiresNewA pb4RequiresNewA;
+    @Resource
+    private Pb7NestedA pb7NestedA;
 
     @GetMapping("/test")
     public void test() {
 //        pb1RequiredA.methodA1();
-//        pb1RequiredA.methodA2();
+        pb1RequiredA.methodA2();
 //        pb2SupportsA.methodA1();
 //        pb2SupportsA.methodA2();
-        pb4RequiresNewA.methodA1();
+//        pb4RequiresNewA.methodA1();
+//        pb7NestedA.methodA1();
     }
 
 }

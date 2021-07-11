@@ -33,4 +33,10 @@ public interface PbUserMapper {
      */
     @Update("update pb_user set work=work+1 where id=#{id}")
     void workAdd(Integer id);
+
+    @Update("update pb_user set work=work+1,age=age+1 where id=1")
+    void id1Add();
+
+    @Update("update pb_user set work=work+1,age=age+1 where id=2")
+    void id2Add();
 }
