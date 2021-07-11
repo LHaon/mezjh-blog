@@ -42,9 +42,14 @@ public class Pb2SupportsA {
     @Transactional(rollbackFor = Exception.class)
     public void methodA2() {
         List<PbUser> allUser = pbUserMapper.getAllUser();
-        allUser.forEach(x -> pbUserMapper.workAdd(x.getId()));
-        pb2SupportsB.methodB1();
-//        throw new RuntimeException();
+        pbUserMapper.id1Add();
+        try {
+            pb2SupportsB.methodB1();
+        } catch (Exception e) {
+
+        }
+        List<PbUser> allUser2 = pbUserMapper.getAllUser();
+        throw new RuntimeException();
     }
 
 
@@ -54,10 +59,11 @@ public class Pb2SupportsA {
         @Resource
         private PbUserMapper pbUserMapper;
 
-        @Transactional(rollbackFor = Exception.class, propagation = Propagation.MANDATORY)
+        @Transactional(rollbackFor = Exception.class, propagation = Propagation.SUPPORTS)
         public void methodB1() {
             List<PbUser> allUser = pbUserMapper.getAllUser();
-            allUser.forEach(x -> pbUserMapper.ageAdd(x.getId()));
+            pbUserMapper.id2Add();
+            List<PbUser> allUser2 = pbUserMapper.getAllUser();
 //            throw new RuntimeException();
         }
     }
