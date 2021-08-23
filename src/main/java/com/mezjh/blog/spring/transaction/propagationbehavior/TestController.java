@@ -27,10 +27,10 @@ public class TestController {
     @GetMapping("/test")
     public void test() {
 //        pb1RequiredA.methodA1();
-        pb1RequiredA.methodA2();
+//        pb1RequiredA.methodA2();
 //        pb2SupportsA.methodA1();
 //        pb2SupportsA.methodA2();
-//        pb4RequiresNewA.methodA1();
+        pb4RequiresNewA.methodA1();
 //        pb7NestedA.methodA1();
     }
 

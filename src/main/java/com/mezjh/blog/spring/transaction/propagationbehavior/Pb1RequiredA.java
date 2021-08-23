@@ -43,14 +43,13 @@ public class Pb1RequiredA {
     public void methodA2() {
         List<PbUser> allUser = pbUserMapper.getAllUser();
         pbUserMapper.id1Add();
-        pbUserMapper.id1Add();
-//        try {
-//            pb1RequiredB.methodB1();
-//        } catch (Exception e) {
-//
-//        }
+        try {
+            pb1RequiredB.methodB1();
+        } catch (Exception e) {
+
+        }
         List<PbUser> allUser2 = pbUserMapper.getAllUser();
-        //throw new RuntimeException();
+        throw new RuntimeException();
     }
 
     @Service
